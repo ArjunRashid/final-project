@@ -108,13 +108,14 @@ public_key, private_key = generate_keypair(bits)
 plaintext = st.text_input("Enter the message to encrypt", "")
 
 # Encrypt the message using the public key
-encrypted_message = encrypt(public_key, plaintext)
+if plaintext:
+    encrypted_message = encrypt(public_key, plaintext)
 
-# Display the encrypted message
-st.write("Encrypted message:", encrypted_message)
+    # Display the encrypted message
+    st.write("Encrypted message:", encrypted_message)
 
-# Decrypt the message using the private key
-decrypted_message = decrypt(private_key, encrypted_message)
+    # Decrypt the message using the private key
+    decrypted_message = decrypt(private_key, encrypted_message)
 
-# Display the decrypted message
-st.write("Decrypted message:", decrypted_message)
+    # Display the decrypted message
+    st.write("Decrypted message:", decrypted_message)
