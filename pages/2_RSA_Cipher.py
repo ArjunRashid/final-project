@@ -97,13 +97,14 @@ def decrypt(private_key, ciphertext):
 
 # Streamlit app
 st.title("RSA Encryption and Decryption")
+st.markdown("---")
 
 st.write("It uses a pair of keys: a public key for encryption and a private key for decryption.")
 
 st.write("Process: Asymmetric encryption relies on the mathematical properties of certain algorithms to enable secure communication without sharing a secret key. The public key is widely distributed, allowing anyone to encrypt messages, while the private key is kept secret and used for decryption.")
-st.write("\tKey Pair Generation: Public Key and Private Key")
-st.write("\tEncryption: Plaintext + Public Key -> Ciphertext")
-st.write("\tDecryption: Ciphertext + Private Key -> Plaintext")
+st.write("Key Pair Generation: Public Key and Private Key")
+st.write("Encryption: Plaintext + Public Key -> Ciphertext")
+st.write("Decryption: Ciphertext + Private Key -> Plaintext")
 
 st.markdown("---")
 

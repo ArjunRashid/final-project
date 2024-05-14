@@ -6,3 +6,4 @@ streamlit
 pycryptodome
 Cryptography
 Crypto
+pyQt5
