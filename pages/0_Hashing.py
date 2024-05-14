@@ -13,7 +13,9 @@ st.title("Hashing Functions")
 
 st.write("Hashing algorithms have been used for centuries for tasks like data indexing and integrity verification. Modern cryptographic hashing algorithms like MD5, SHA-1, SHA-256, and SHA-512 provide secure and efficient ways to generate fixed-size hash values from arbitrary data.")
 st.write("Process")
-st.write("\tInput (any size) -> Hash Function -> Fixed-Size Hash Value (digest)")
+st.write("Input (any size) -> Hash Function -> Fixed-Size Hash Value (digest)")
+
+st.markdown("---")
 
 # Ask the user to input text or upload a file
 option = st.radio("Choose input method:", ("Text", "File"))

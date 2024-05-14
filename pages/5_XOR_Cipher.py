@@ -22,8 +22,6 @@ def xor_decrypt(ciphertext, key):
 def main():
     st.title("XOR Cipher Encryption App")
 
-    st.markdown("---")
-
     mode = st.sidebar.radio("Mode", ("Encrypt Text", "Decrypt Text", "Encrypt File", "Decrypt File"))
 
     key = st.sidebar.text_input("Enter Key")
@@ -33,14 +31,12 @@ def main():
         if st.button("Encrypt"):
             encrypted_text = xor_encrypt(text.encode(), key.encode())
             st.text_area("Encrypted Text", value=encrypted_text.decode(), height=200)
-            st.text("Result of Encryption: " + encrypted_text.decode())
 
     elif mode == "Decrypt Text":
         text = st.text_area("Enter Text to Decrypt")
         if st.button("Decrypt"):
             decrypted_text = xor_decrypt(text.encode(), key.encode())
             st.text_area("Decrypted Text", value=decrypted_text.decode(), height=200)
-            st.text("Result of Decryption: " + decrypted_text.decode())
 
     elif mode == "Encrypt File":
         file = st.file_uploader("Upload File to Encrypt", type=["txt"])
@@ -49,7 +45,6 @@ def main():
                 file_contents = file.read()
                 encrypted_file_contents = xor_encrypt(file_contents, key.encode())
                 st.text_area("Encrypted File Contents", value=encrypted_file_contents.decode(), height=200)
-                st.text("Result of Encryption: " + encrypted_file_contents.decode())
             else:
                 st.error("Please upload a text file.")
 
@@ -60,7 +55,6 @@ def main():
                 file_contents = file.read()
                 decrypted_file_contents = xor_decrypt(file_contents, key.encode())
                 st.text_area("Decrypted File Contents", value=decrypted_file_contents.decode(), height=200)
-                st.text("Result of Decryption: " + decrypted_file_contents.decode())
             else:
                 st.error("Please upload a text file.")
 
