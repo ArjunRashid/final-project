@@ -67,7 +67,13 @@ def process_file(mode, key, file, salt):
         st.text_area("Decrypted File", value=decrypted_file_contents.decode(), height=200)
 
 def main():
-    st.title("RC4 Encryption App")
+    st.title("Rivest Encryption App")
+
+    st.write("Symmetric encryption involves using the same secret key for both encryption and decryption. The encryption process converts plaintext into ciphertext using the secret key, while the decryption process reverses this transformation to recover the original plaintext.")
+
+    st.write("\tEncryption: Plaintext + Key -> Ciphertext")
+    st.write("\tDecryption: Ciphertext + Key -> Plaintext")
+    st.write("\tKey Distribution: The critical challenge in symmetric encryption.")
 
     mode = st.sidebar.radio("Mode", ("Encrypt Text", "Decrypt Text", "Encrypt File", "Decrypt File"))
     key = st.sidebar.text_input("Enter Key", type="password")
