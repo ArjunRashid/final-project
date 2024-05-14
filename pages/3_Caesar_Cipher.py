@@ -43,6 +43,8 @@ def caesar_decrypt(encrypted_text, keys):
 def main():
     st.title("Caesar Cipher Encryption App")
 
+    st.markdown("---")
+
     mode = st.sidebar.radio("Mode", ("Encrypt Text", "Decrypt Text", "Encrypt File", "Decrypt File"))
 
     keys_input = st.sidebar.text_input("Enter Key (Shifts) separated by spaces", "3 5 7")

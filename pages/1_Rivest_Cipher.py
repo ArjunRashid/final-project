@@ -75,6 +75,8 @@ def main():
     st.write("\tDecryption: Ciphertext + Key -> Plaintext")
     st.write("\tKey Distribution: The critical challenge in symmetric encryption.")
 
+    st.markdown("---")
+
     mode = st.sidebar.radio("Mode", ("Encrypt Text", "Decrypt Text", "Encrypt File", "Decrypt File"))
     key = st.sidebar.text_input("Enter Key", type="password")
     iv = st.sidebar.text_input("Enter IV (Initialization Vector)", type="password")

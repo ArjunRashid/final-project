@@ -22,6 +22,8 @@ def xor_decrypt(ciphertext, key):
 def main():
     st.title("XOR Cipher Encryption App")
 
+    st.markdown("---")
+
     mode = st.sidebar.radio("Mode", ("Encrypt Text", "Decrypt Text", "Encrypt File", "Decrypt File"))
 
     key = st.sidebar.text_input("Enter Key")

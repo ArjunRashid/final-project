@@ -105,6 +105,8 @@ st.write("\tKey Pair Generation: Public Key and Private Key")
 st.write("\tEncryption: Plaintext + Public Key -> Ciphertext")
 st.write("\tDecryption: Ciphertext + Private Key -> Plaintext")
 
+st.markdown("---")
+
 # Ask the user for the bit length of primes
 bits = st.slider("Select the bit length for primes", min_value=32, max_value=1024, step=32, value=512)
 

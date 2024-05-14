@@ -11,6 +11,8 @@ class DSAApp(QWidget):
         self.setWindowTitle("DSA Signature Verification")
         self.init_ui()
         
+        st.markdown("---")
+
         # Generate key pair
         self.private_key, self.public_key = self.generate_keypair()
 
